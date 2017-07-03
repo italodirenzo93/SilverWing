@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject m_graphicsObject;
     [SerializeField]
+    private Camera m_mainCamera;
+    [SerializeField]
     private Vector2 m_viewportBoundsPadding;
     [SerializeField]
     private ParticleSystem[] m_auxThrusters;
@@ -30,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
         m_baseMovementSpeed = MovementSpeed;
+
+        // Parent to the main camera
+        transform.parent = m_mainCamera.transform;
 
         // Auxillery thrusters start disabled
         ActivateAuxThrusters(false);

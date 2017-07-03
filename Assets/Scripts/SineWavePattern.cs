@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class SineWavePattern : MonoBehaviour
+public class SineWavePattern : FlightPatternBehaviour
 {
     public float verticalVelocity;
     public float horizontalVelocity;

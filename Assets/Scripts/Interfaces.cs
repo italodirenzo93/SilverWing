@@ -3,8 +3,5 @@
     void Fire();
 }
 
-public interface IFlightPattern
-{
-    float speed { get; set; }
-    void DoFlightPattern();
-}
+// Used to group flight pattern components
+public abstract class FlightPatternBehaviour : UnityEngine.MonoBehaviour { }
